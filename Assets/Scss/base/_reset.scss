@@ -1,0 +1,9 @@
+*,*::before,*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+// resetting  all image sizes so it fits the parent elements
+img{
+  width: 100%;
+}

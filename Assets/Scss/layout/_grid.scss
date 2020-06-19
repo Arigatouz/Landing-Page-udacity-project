@@ -1,0 +1,27 @@
+.section {
+  height: 100vh;
+  margin-top: 10em;
+  &__container {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.border {
+  border-bottom: 10px double $pink-color;
+  width: 20%;
+  margin: 0 auto;
+}
+.connection {
+  &__box {
+    width: 30%;
+  }
+  &__icon{
+    text-align: right;
+  }
+  &__formed {
+    margin: 5em 0;
+  }
+  &__image {
+    width: 70%;
+  }
+}

@@ -1,0 +1,42 @@
+.mainHeader {
+  background-color: $mainHeader-color;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 5;
+  height: 20vh;
+  position: fixed;
+  width: 98.5%;
+  box-shadow: 0.5em 1em 2em rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease-in;
+  &__box {
+    width: 45%;
+  }
+}
+
+.heroHeader {
+  margin-top: 18em;
+  padding: 0 1em;
+  height: 60rem;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.8),
+      rgba($pink-color, 0.3)
+    ),
+    url(https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  &__box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
+
+section {
+  height: 500px;
+}

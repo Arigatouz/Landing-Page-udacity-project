@@ -1,0 +1,24 @@
+.button {
+  cursor: pointer;
+  margin-top: 1em;
+  font-size: $default-font-size;
+  border: 5px solid $mainHeader-color;
+  background-color: $pink-color;
+  color: $mainHeader-color;
+  border-radius: 20em;
+  padding: 1em 4em;
+  transition: all 0.3s ease-out;
+  &:hover {
+    color: $pink-color;
+    background-color: $mainHeader-color;
+    border-color: $pink-color;
+    transform: translateY(-2px);
+    box-shadow: 0.5em 0.51em 2em rgba($pink-color, 0.5);
+    // box-shadow: 0.5em 0.51em 2em rgba(0, 0, 0, 0.5);
+  }
+  &:active {
+    transform: translateY(3px);
+    box-shadow: 0.2em 0.3em 1em rgba($pink-color, 0.5);
+    // box-shadow: 0.2em 0.3em 1em rgba(0, 0, 0, 0.5);
+  }
+}

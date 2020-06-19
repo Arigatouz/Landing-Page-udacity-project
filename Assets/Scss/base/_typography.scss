@@ -1,0 +1,75 @@
+/*
+font-family: 'Lobster', cursive;
+font-family: 'Piedra', cursive;
+font-family: 'Roboto', sans-serif;
+*/
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.mainHeader__logo {
+  font-family: "lobster", cursive;
+  text-decoration: none;
+  color: $pink-color;
+  text-decoration: none;
+  & h1 {
+    font-size: $logo-font;
+    &::first-letter {
+      font-size: $logo-letter-font;
+      font-family: "Piedra", cursive;
+      color: $mainHeader-letter-color;
+      letter-spacing: 0.15em;
+    }
+  }
+}
+
+.nav__link {
+  font-size: 1.5rem;
+  color: inherit;
+  text-transform: capitalize;
+  text-decoration: none;
+  margin-top: 20px;
+  &:hover,
+  &:focus {
+    background-color: $pink-color;
+    color: $mainHeader-color;
+  }
+}
+
+.heroHeader {
+  text-align: center;
+  &__box {
+    line-height: 1.4;
+    & h1 {
+      font-size: 5rem;
+      font-weight: 100;
+      color: $pink-color;
+    }
+    & p {
+      font-size: $default-font-size;
+      font-weight: 700;
+      font-style: italic;
+      color: $mainHeader-color;
+    }
+  }
+}
+.section__title{
+  font-size: $logo-font;
+  color: $pink-color;
+  text-align: center;
+  margin-bottom: 2em;
+  text-transform: uppercase;
+}
+.connection__formed,
+.connection__messages {
+  text-align: center;
+  & h1 {
+    font-family: "Roboto", sans-serif;
+    font-size: $logo-letter-font;
+  }
+  & p{
+    font-family: 'Lobster', cursive;
+    font-size: $default-font-size;
+    color: #888;
+  }
+}
