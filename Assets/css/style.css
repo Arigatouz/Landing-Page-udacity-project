@@ -5,7 +5,7 @@
 [1200 - 1800] is where our normal styles apply
 1800px + :      Big desktop
 
-$breakpoint arguement choices:
+$breakpoint argument choices:
 - phone
 - tab-port
 - tab-land
@@ -62,7 +62,7 @@ body {
 
 .nav__link:hover, .nav__link:focus {
   background-color: #ff52bf;
-  color: #FFF;
+  color: #fff;
 }
 
 .heroHeader {
@@ -83,33 +83,84 @@ body {
   font-size: 1.8rem;
   font-weight: 700;
   font-style: italic;
-  color: #FFF;
+  color: #fff;
+}
+
+.waterMark {
+  font-size: 25em;
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  z-index: -1;
+  opacity: 0.1;
+  color: #ff52bf;
+  -webkit-transform: rotateZ(20deg);
+          transform: rotateZ(20deg);
+  overflow: hidden;
+}
+
+.adjust {
+  left: 5%;
 }
 
 .section__title {
   font-size: 5rem;
   color: #ff52bf;
   text-align: center;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   text-transform: uppercase;
 }
 
-.connection__formed,
-.connection__messages {
+.connections__formed,
+.connections__messages {
   text-align: center;
 }
 
-.connection__formed h1,
-.connection__messages h1 {
+.connections__formed h1,
+.connections__messages h1 {
   font-family: "Roboto", sans-serif;
   font-size: 10rem;
 }
 
-.connection__formed p,
-.connection__messages p {
-  font-family: 'Lobster', cursive;
+.connections__formed p,
+.connections__messages p {
+  font-family: "Lobster", cursive;
   font-size: 1.8rem;
-  color: #888;
+  color: #666;
+}
+
+.conversations {
+  text-align: center;
+}
+
+.conversations__header {
+  font-family: "Roboto", sans-serif;
+  font-size: 6rem;
+  color: #ff52bf;
+  font-weight: 100;
+}
+
+.conversations__body {
+  font-family: "Lobster", cursive;
+  font-size: 1.8rem;
+  color: #666;
+}
+
+.goals {
+  text-align: center;
+}
+
+.goals__header {
+  font-family: "Roboto", sans-serif;
+  font-size: 6rem;
+  color: #ff52bf;
+  font-weight: 100;
+}
+
+.goals__body {
+  font-family: "Lobster", cursive;
+  font-size: 1.8rem;
+  color: #666;
 }
 
 *, *::before, *::after {
@@ -127,9 +178,9 @@ img {
   cursor: pointer;
   margin-top: 1em;
   font-size: 1.8rem;
-  border: 5px solid #FFF;
+  border: 5px solid #fff;
   background-color: #ff52bf;
-  color: #FFF;
+  color: #fff;
   border-radius: 20em;
   padding: 1em 4em;
   -webkit-transition: all 0.3s ease-out;
@@ -138,7 +189,7 @@ img {
 
 .button:hover {
   color: #ff52bf;
-  background-color: #FFF;
+  background-color: #fff;
   border-color: #ff52bf;
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
@@ -154,6 +205,7 @@ img {
 }
 
 .section {
+  position: relative;
   height: 100vh;
   margin-top: 10em;
 }
@@ -164,6 +216,9 @@ img {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .border {
@@ -172,24 +227,54 @@ img {
   margin: 0 auto;
 }
 
-.connection__box {
+.connections__box {
   width: 30%;
 }
 
-.connection__icon {
+.connections__icon {
   text-align: right;
 }
 
-.connection__formed {
+.connections__formed {
   margin: 5em 0;
 }
 
-.connection__image {
-  width: 70%;
+.connections__image {
+  width: 60%;
+  z-index: -5;
+}
+
+.conversations {
+  padding: 0 5em;
+  margin-bottom: 5em;
+}
+
+.conversations__image {
+  width: 40%;
+}
+
+.conversations__box {
+  width: 40%;
+  margin-left: 10em;
+}
+
+.goals {
+  padding: 0 5em;
+  margin-bottom: 5em;
+}
+
+.goals__image {
+  width: 60%;
+  z-index: -5;
+}
+
+.goals__box {
+  width: 30%;
+  margin-left: 10em;
 }
 
 .mainHeader {
-  background-color: #FFF;
+  background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -241,7 +326,7 @@ section {
 }
 
 .nav {
-  width: 50%;
+  width: 40%;
 }
 
 .nav__list {
@@ -252,6 +337,7 @@ section {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  margin-top: 1.5em;
 }
 
 .nav__item {

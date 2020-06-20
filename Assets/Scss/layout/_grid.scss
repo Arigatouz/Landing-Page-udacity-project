@@ -1,9 +1,11 @@
 .section {
+  position: relative;
   height: 100vh;
   margin-top: 10em;
   &__container {
     display: flex;
     justify-content: space-around;
+    align-items: center;
   }
 }
 .border {
@@ -11,17 +13,41 @@
   width: 20%;
   margin: 0 auto;
 }
-.connection {
+.connections {
   &__box {
     width: 30%;
   }
-  &__icon{
+  &__icon {
     text-align: right;
   }
   &__formed {
     margin: 5em 0;
   }
   &__image {
-    width: 70%;
+    width: 60%;
+    z-index: -5;
+  }
+}
+.conversations {
+  padding: 0 5em;
+  margin-bottom: 5em;
+  &__image {
+    width: 40%;
+  }
+  &__box {
+    width: 40%;
+    margin-left: 10em;
+  }
+}
+.goals {
+  padding: 0 5em;
+  margin-bottom: 5em;
+  &__image {
+    width: 60%;
+    z-index: -5;
+  }
+  &__box {
+    width: 30%;
+    margin-left: 10em;
   }
 }

@@ -1,5 +1,5 @@
- // abstracts import
-@import "abstracts/functions";
+// abstracts import
+
 @import "abstracts/mixins";
 @import "abstracts/variables";
 // base  import
@@ -8,13 +8,9 @@
 @import "base/reset";
 //components import
 @import "components/buttons";
-@import "components/form";
-@import "components/gallery";
+
 // layout import
-@import "layout/footer";
+
 @import "layout/grid";
 @import "layout/header";
 @import "layout/navigation";
-
-//pages inputs
-@import "pages/home";
