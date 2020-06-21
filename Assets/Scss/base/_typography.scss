@@ -14,13 +14,24 @@ body {
   text-decoration: none;
   & h1 {
     font-size: $logo-font;
+    @include respond(phone) {
+      font-size: 2rem;
+    }
     &::first-letter {
       font-size: $logo-letter-font;
       font-family: "Piedra", cursive;
       color: $mainHeader-letter-color;
       letter-spacing: 0.15em;
-      @include respond(tab-land){
-        margin-left:0.5em;;
+      @include respond(tab-land) {
+        margin-left: 0.5em;
+      }
+      @include respond(tab-port) {
+        font-size: 7rem;
+        margin-left: 0.3em;
+      }
+      @include respond(phone) {
+        font-size:7rem;
+        margin-left: 0.3em;
       }
     }
   }
@@ -66,25 +77,24 @@ body {
   color: $pink-color;
   transform: rotateZ(20deg);
   overflow: hidden;
- @include respond(tab-land){
-   font-size: 17rem;
- }
- @include respond(tab-port){
-  font-size: 12rem;
-   transform: none;
-   top: 1%;
-   left: 5%;
- }
- @include respond(phone){
-   font-size: 2rem;
- }
+  @include respond(tab-land) {
+    font-size: 17rem;
+  }
+  @include respond(tab-port) {
+    font-size: 12rem;
+    transform: none;
+    top: 1%;
+    left: 5%;
+  }
+  @include respond(phone) {
+    font-size: 2rem;
+  }
 }
 .adjust {
   left: 5%;
-  @include respond(tab-port){
+  @include respond(tab-port) {
     left: 15%;
   }
-
 }
 .section__title {
   font-size: $logo-font;
@@ -92,6 +102,9 @@ body {
   text-align: center;
   margin-bottom: 1em;
   text-transform: uppercase;
+  @include respond(phone) {
+    font-size: 3.5rem;
+  }
 }
 .connections__formed,
 .connections__messages {
@@ -99,6 +112,9 @@ body {
   & h1 {
     font-family: "Roboto", sans-serif;
     font-size: $logo-letter-font;
+    @include respond(phone) {
+      font-size: 5rem;
+    }
   }
   & p {
     font-family: "Lobster", cursive;
@@ -114,13 +130,16 @@ body {
     font-size: $heading;
     color: $pink-color;
     font-weight: 100;
+    @include respond(phone) {
+      font-size: 4rem;
+      text-align: left;
+    }
   }
   &__body {
-    
     font-family: "Lobster", cursive;
     font-size: $default-font-size;
     color: $body-color;
-    @include respond(tab-land){
+    @include respond(tab-land) {
       text-align: justify;
     }
   }
@@ -133,12 +152,16 @@ body {
     font-size: $heading;
     color: $pink-color;
     font-weight: 100;
+    @include respond(phone) {
+      font-size: 4rem;
+      text-align: left;
+    }
   }
   &__body {
     font-family: "Lobster", cursive;
     font-size: $default-font-size;
     color: $body-color;
-    @include respond(tab-land){
+    @include respond(tab-land) {
       text-align: justify;
     }
   }

@@ -33,7 +33,9 @@ body {
   @include respond(tab-land){
     padding: 0 2em;
   }
-
+  @include respond(tab-port){
+    padding: 0;
+  }
 }
 
 
