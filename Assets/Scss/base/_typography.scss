@@ -19,6 +19,9 @@ body {
       font-family: "Piedra", cursive;
       color: $mainHeader-letter-color;
       letter-spacing: 0.15em;
+      @include respond(tab-land){
+        margin-left:0.5em;;
+      }
     }
   }
 }
@@ -54,7 +57,7 @@ body {
   }
 }
 .waterMark {
-  font-size: 25em;
+  font-size: 20rem;
   position: absolute;
   top: 30%;
   left: 0%;
@@ -63,9 +66,25 @@ body {
   color: $pink-color;
   transform: rotateZ(20deg);
   overflow: hidden;
+ @include respond(tab-land){
+   font-size: 17rem;
+ }
+ @include respond(tab-port){
+  font-size: 12rem;
+   transform: none;
+   top: 1%;
+   left: 5%;
+ }
+ @include respond(phone){
+   font-size: 2rem;
+ }
 }
 .adjust {
   left: 5%;
+  @include respond(tab-port){
+    left: 15%;
+  }
+
 }
 .section__title {
   font-size: $logo-font;
@@ -97,9 +116,13 @@ body {
     font-weight: 100;
   }
   &__body {
+    
     font-family: "Lobster", cursive;
     font-size: $default-font-size;
     color: $body-color;
+    @include respond(tab-land){
+      text-align: justify;
+    }
   }
 }
 
@@ -115,5 +138,8 @@ body {
     font-family: "Lobster", cursive;
     font-size: $default-font-size;
     color: $body-color;
+    @include respond(tab-land){
+      text-align: justify;
+    }
   }
 }

@@ -10,6 +10,8 @@
     />
     <link rel="stylesheet" href="./Assets/css/style.css" />
     <script src="./Assets/js/app.js" defer></script>
+    <script src="./Assets/js/jq.js" defer></script>
+
   </head>
   <body>
     <!-- The classes naming follows the BEM Methodology  -->
@@ -18,6 +20,7 @@
         <a href="#" class="mainHeader__logo"><h1>Udacity Fans</h1></a>
       </div>
       <nav class="nav">
+        <div class="nav__toggler"><i class="nav__toggler__icon fas fa-bars"></i></div>
         <ul class="nav__list">
           <!-- will create this by the JS -->
         </ul>
@@ -104,7 +107,7 @@
                 <filter
                   x="-1.6%"
                   y="-2.5%"
-                  width="103.1%"
+                  width="70.1%"
                   height="105%"
                   filterUnits="objectBoundingBox"
                   id="a"
@@ -378,6 +381,14 @@
         <div class="waterMark">conversation</div>
         <h1 class="section__title">Conversations</h1>
         <div class="section__container">
+          <div class="conversations__box">
+            <h1 class="conversations__header">Flowing Conversations</h1>
+            <p class="conversations__body">
+              You wouldn't paginate a conversation in real life, so why do it
+              online? Our threads have just-in-time loading for a more natural
+              flow.
+            </p>
+          </div>
           <div class="conversations__image">
             <svg
               data-name="Layer 1"
@@ -1652,14 +1663,7 @@
               />
             </svg>
           </div>
-          <div class="conversations__box">
-            <h1 class="conversations__header">Flowing Conversations</h1>
-            <p class="conversations__body">
-              You wouldn't paginate a conversation in real life, so why do it
-              online? Our threads have just-in-time loading for a more natural
-              flow.
-            </p>
-          </div>
+         
         </div>
       </section>
       <div class="border"></div>
@@ -2140,7 +2144,6 @@
           </div>
         </div>
       </section>
-      <div class="border"></div>
       <!-- ============================================================== -->
       <!-- this is the testing section to be added to the nav bar -->
 
@@ -2159,4 +2162,11 @@
       <div class="border"></div>
     </main>
   </body>
+  <footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  </footer>
 </html>
