@@ -1,13 +1,12 @@
-
 // getting the variable needed for adding my nav bar
 
-const navNames = document.querySelectorAll(".section");
+const sections = document.querySelectorAll(".section");
 const navList = document.querySelector(".nav__list");
 const ids = ["connections", "conversations", "goals"];
-navNames.forEach((element) => {
+sections.forEach((element) => {
   const navItem = document.createElement("li");
   navItem.classList = "nav__item";
-  navItem.innerHTML = `<a class="nav__link" href="#${element.id}" data-link="${element.dataset.nav}">${element.dataset.nav}</a>`;
+  navItem.innerHTML = `<a class="nav__link" href="#${element.id}"  data-link="${element.dataset.nav}">${element.dataset.nav}</a>`;
   navItem.addEventListener("click", function () {
     let current = document.getElementsByClassName("active");
     // If there's no active class
@@ -18,6 +17,7 @@ navNames.forEach((element) => {
     this.classList.add("active");
   });
   navList.appendChild(navItem);
+  const links = document.querySelectorAll("li a");
 });
 
 let start = 150;
@@ -33,15 +33,17 @@ const onPageScroll = function () {
   if (window.pageYOffset > start) {
     header.style.backgroundColor = "#333";
     header.style.opacity = 0.8;
-    if (window.pageYOffset > 800 && window.pageYOffset < 2000) {
+    if (sections[0].getBoundingClientRect().top < 300 &&
+        sections[0].getBoundingClientRect().bottom > 300) {
       one.classList.add("active");
       two.classList.remove("active");
       three.classList.remove("active");
-    } else if (window.pageYOffset > 2000 && window.pageYOffset < 3000) {
+    } else if (sections[1].getBoundingClientRect().top <= 400 &&
+                sections[1].getBoundingClientRect().bottom >=270) {
       one.classList.remove("active");
       two.classList.add("active");
       three.classList.remove("active");
-    } else if (window.pageYOffset > 3000) {
+    } else if (sections[2].getBoundingClientRect().top <=500) {
       one.classList.remove("active");
       two.classList.remove("active");
       three.classList.add("active");
@@ -62,13 +64,9 @@ const onPageScroll = function () {
 };
 window.addEventListener("scroll", onPageScroll);
 
+const togglerButton = document.querySelector(".nav__toggler");
 
-const togglerButton = document.querySelector('.nav__toggler');
-
-togglerButton.addEventListener('click' , function(){
-  navList.classList.toggle("nav__visible")
-
-})
-// the Jquery part 
-
-
+togglerButton.addEventListener("click", function () {
+  navList.classList.toggle("nav__visible");
+});
+// the Jquery part

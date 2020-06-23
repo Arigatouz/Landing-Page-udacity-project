@@ -89,7 +89,7 @@ img {
   padding: 0 5em;
   margin-bottom: 5em;
   &__image {
-    width: 60%;
+    width: 50%;
     order: 1;
     @include respond(tab-land) {
       width: 100%;
